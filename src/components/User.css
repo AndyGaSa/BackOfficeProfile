@@ -1,13 +1,15 @@
 .UserContainer:first-child{
     display: flex;
+    flex-direction: column;
     height: 80vh;
     background-color: yellow;
     justify-content: center;
-    
     margin-left: 2vw;
 }
 .PortraitImg{
     background-color: lightblue;
-    height: 25%;
+    height: 35%;
     width: 100%;
+    display: flex;
+    justify-content: center;
 }
