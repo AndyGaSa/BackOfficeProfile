@@ -1,10 +1,15 @@
 import React from 'react';
+import Header from './components/Header';
+import User from './components/User';
+import Map from './components/Map';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <h1>BackOffice working</h1>
+      <Header />
+      <User />
+      <Map />
     </div>
   );
 }
