@@ -1,5 +1,7 @@
 .UserForm{
     width: 100%;
     height: 100%;
-    background-color: red;
+    background-color: lightpink;
+    padding-top: 15vh;
+    padding-left: 1vw;
 }
