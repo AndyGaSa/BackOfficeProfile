@@ -1,11 +1,15 @@
 import React from 'react';
+import Container from '@material-ui/core/Container';
+import UserAvatar from './UserAvatar';
+import './User.css';
 
-function User() {
+export default function User() {
   return (
-    <div>
-      <h1>User</h1>
-    </div>
+    <>
+      <Container maxWidth="md" className="UserContainer">
+        <div className="PortraitImg" />
+        <UserAvatar />
+      </Container>
+    </>
   );
 }
-
-export default User;

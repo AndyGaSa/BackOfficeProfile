@@ -1,0 +1,11 @@
+.UserAvatarDiv{
+    position:absolute; 
+}
+.UserAvatarImg:first-child{
+    width: 10vw;
+    height: auto;
+    margin-top: 13vh;
+}
+.UserAvatarImg{
+    display: flex;
+}
