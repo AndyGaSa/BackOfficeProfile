@@ -54,7 +54,7 @@ export default function UserForm() {
       </div>
       <FormControl component="fieldset" className="RadioForm">
         <FormLabel component="legend">Gender</FormLabel>
-        <RadioGroup aria-label="gender" name="gender1" value={value} onChange={handleChange} required="true">
+        <RadioGroup aria-label="gender" name="gender1" value={value} onChange={handleChange}>
           <FormControlLabel value="female" control={<Radio />} label="Female" />
           <FormControlLabel value="male" control={<Radio />} label="Male" />
         </RadioGroup>

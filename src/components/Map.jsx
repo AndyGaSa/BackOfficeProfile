@@ -1,25 +1,30 @@
 /* eslint-disable react/prop-types */
 import React, { useState } from 'react';
-import { CssBaseline, Typography, Container } from '@material-ui/core';
+import {
+  CssBaseline, Typography, Container, Button,
+} from '@material-ui/core';
+import LocationOnIcon from '@material-ui/icons/LocationOn';
+import PersonPinCircleIcon from '@material-ui/icons/PersonPinCircle';
 import GoogleMapReact from 'google-map-react';
 
 export default function Map() {
-  const [lat, setLat] = useState(41.410167);
-  const [lng, setLgn] = useState(2.209742);
+  const [center, setCenter] = useState({
+    lat: 41.410167,
+    lng: 2.209742,
+  });
   function getCurrentPosition() {
     navigator.geolocation.getCurrentPosition((position) => {
-      setLat(position.coords.latitude);
-      setLgn(position.coords.longitude);
+      setCenter({ lat: position.coords.latitude, lng: position.coords.longitude });
     });
   }
-  const defaultProps = {
-    center: {
-      lat,
-      lng,
-    },
-    zoom: 18,
-  };
-  const AnyReactComponent = ({ text }) => <div>{text}</div>;
+  const zoom = 18;
+  const LocationMarker = ({ latText, lngText }) => (
+    <div>
+      <LocationOnIcon fontSize="large" />
+      <p className="lat-text">{`Latitude: ${latText}`}</p>
+      <p className="lng-text">{`Longitude: ${lngText}`}</p>
+    </div>
+  );
   return (
     <>
       <CssBaseline />
@@ -27,16 +32,19 @@ export default function Map() {
         <Typography component="div" style={{ backgroundColor: '#cfe8fc', height: '60vh' }}>
           <GoogleMapReact
             bootstrapURLKeys={{ key: 'AIzaSyBRUMLTzjuEywhAXLLpHwwOBTeYR0Biu-0' }}
-            defaultCenter={defaultProps.center}
-            defaultZoom={defaultProps.zoom}
+            center={center}
+            defaultZoom={zoom}
           >
-            <AnyReactComponent
-              lat={lat}
-              lng={lng}
-              text="My Marker"
+            <LocationMarker
+              lat={center.lat}
+              lng={center.lng}
+              latText={center.lat}
+              lngText={center.lng}
             />
           </GoogleMapReact>
-          <button type="button" onClick={getCurrentPosition}>pulsame</button>
+          <Button variant="contained" color="primary" startIcon={<PersonPinCircleIcon />} onClick={getCurrentPosition}>
+            Get My Location
+          </Button>
         </Typography>
       </Container>
     </>
