@@ -8,6 +8,18 @@
     height: auto;
     border: 5px solid white;
 }
+.UserAvatarImg{
+    position: relative;
+}
 .inputUpload{
     display: none;
+}
+.editIconDiv{
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-right: -7px;
+    margin-top: -7px;
+    border-radius: 100%;
+    background-color: rgb(55, 81, 93);
 }

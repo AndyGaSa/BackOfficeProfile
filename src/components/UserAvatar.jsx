@@ -14,11 +14,11 @@ export default function UserAvatar() {
   return (
     <div className="UserAvatarDiv">
       <Avatar alt="Jhon Snow" src={profileImg} className="UserAvatarImg" />
-      <div className="UploadDiv">
+      <div>
         <input accept="image/*" className="inputUpload" onChange={onImageChange} id="icon-button-file" type="file" />
-        <label htmlFor="icon-button-file">
-          <IconButton color="primary" aria-label="upload picture" component="span">
-            <EditIcon />
+        <label htmlFor="icon-button-file" className="editIconDiv">
+          <IconButton aria-label="upload picture" className="iconButton" component="span">
+            <EditIcon style={{ color: 'white' }} />
           </IconButton>
         </label>
       </div>
