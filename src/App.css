@@ -1,12 +1,24 @@
 .Body{
   display: flex;
-  margin-top: 4vh;
   flex-direction: row;
-  flex-wrap: wrap;
   align-items: flex-start;
+  padding: 20px
+}
+.Body > *{
+  margin: 20px 40px
 }
 .App{
   background-color: #FA8BFF;
   background-image: linear-gradient(45deg, #FA8BFF 0%, #2BD2FF 52%, #2BFF88 90%);
   height: 100vh;
+}
+
+@media screen and (max-width: 769px) {
+  .Body {
+    flex-direction: column;
+    align-items: center;
+  }
+  .App{
+    height: 180vh;
+  }
 }

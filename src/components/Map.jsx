@@ -29,12 +29,13 @@ export default function Map() {
   return (
     <>
       <CssBaseline />
-      <Container maxWidth="md" className="Map">
-        <Typography component="div" style={{ backgroundColor: '#cfe8fc', height: '60vh' }}>
+      <Container maxWidth="md" className="MapContainer">
+        <Typography component="div" style={{ backgroundColor: 'smokewhite', height: '70vh' }}>
           <GoogleMapReact
             bootstrapURLKeys={{ key: 'AIzaSyBRUMLTzjuEywhAXLLpHwwOBTeYR0Biu-0' }}
             center={center}
             defaultZoom={zoom}
+            className="GoogleMap"
           >
             <LocationMarker
               lat={center.lat}
@@ -43,7 +44,7 @@ export default function Map() {
               lngText={center.lng}
             />
           </GoogleMapReact>
-          <Button variant="contained" color="primary" startIcon={<PersonPinCircleIcon />} onClick={getCurrentPosition}>
+          <Button variant="contained" color="primary" startIcon={<PersonPinCircleIcon />} id="LocationButton" onClick={getCurrentPosition}>
             Get My Location
           </Button>
         </Typography>

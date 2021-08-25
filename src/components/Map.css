@@ -1,4 +1,12 @@
-.Map{
-    max-width: 500px;
-    width: 400px;
-  }
+#LocationButton{
+    margin-top: 5%;
+}
+.MapContainer > div{
+    background-color: whitesmoke;
+    padding: 35px 50px;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}

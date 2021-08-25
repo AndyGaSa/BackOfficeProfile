@@ -3,8 +3,6 @@
     flex-direction: column;
     height: 80vh;
     justify-content: center;
-    max-width: 500px;
-    margin-left: 2vw;
 }
 .PortraitImg{
     background-color: lightblue;
@@ -13,4 +11,7 @@
     display: flex;
     justify-content: center;
     position: relative;
+}
+.UserContainer{
+    margin-bottom: 2vh;
 }
