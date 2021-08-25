@@ -25,7 +25,7 @@ export default function Header() {
           <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
             <AccountBoxIcon />
           </IconButton>
-          <Typography variant="h6" color="inherit">
+          <Typography variant="h6" data-testid="titleNavbar" color="inherit">
             My Profile
           </Typography>
         </Toolbar>

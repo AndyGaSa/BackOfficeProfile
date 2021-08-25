@@ -23,7 +23,7 @@ export default function UserForm() {
   const [mailErrorTitle, setMailErrorTitle] = useState(false);
   const [RadioValue, setRadioValue] = React.useState('');
   const [RadioErrorText, setRadioErrorText] = React.useState('');
-  const [RadioError, setRadioError] = React.useState('');
+  const [RadioError, setRadioError] = React.useState(false);
 
   const RadioHandleChange = (event) => {
     setRadioValue(event.target.value);
@@ -68,7 +68,7 @@ export default function UserForm() {
     }
   }
   return (
-    <form className="UserForm">
+    <form className="UserForm" data-testid="userForm">
       <div className="UserForm__UserMail">
         <TextField
           onChange={(event) => {
@@ -117,7 +117,7 @@ export default function UserForm() {
           <TextareaAutosize aria-label="empty textarea" placeholder="King of The North" className="TextArea" />
         </label>
       </div>
-      <Button variant="contained" onClick={checkValidation} color="primary">
+      <Button variant="contained" onClick={checkValidation} data-testid="saveButton" color="primary">
         SAVE
       </Button>
     </form>
