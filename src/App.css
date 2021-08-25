@@ -1,6 +1,9 @@
 .Body{
   display: flex;
   margin-top: 4vh;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: flex-start;
 }
 .App{
   background-color: #FA8BFF;

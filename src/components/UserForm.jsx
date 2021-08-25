@@ -20,7 +20,7 @@ export default function UserForm() {
   };
   return (
     <form className="UserForm">
-      <div>
+      <div className="UserForm__UserMail">
         <TextField
           onChange={(event) => {
             setTitle(event.target.value);
@@ -52,15 +52,15 @@ export default function UserForm() {
           variant="outlined"
         />
       </div>
-      <FormControl component="fieldset" className="RadioForm">
-        <FormLabel component="legend">Gender</FormLabel>
-        <RadioGroup aria-label="gender" name="gender1" value={value} onChange={handleChange}>
+      <FormControl component="fieldset">
+        <FormLabel className="RadioFormLabel" component="legend">Gender</FormLabel>
+        <RadioGroup aria-label="gender" id="radioButtons" name="gender1" value={value} onChange={handleChange}>
           <FormControlLabel value="female" control={<Radio />} label="Female" />
           <FormControlLabel value="male" control={<Radio />} label="Male" />
         </RadioGroup>
       </FormControl>
       <div>
-        <label htmlFor="Bio">
+        <label htmlFor="Bio" className="BioForm">
           Bio
           <TextareaAutosize aria-label="empty textarea" placeholder="Bio" />
         </label>

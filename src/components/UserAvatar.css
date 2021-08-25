@@ -1,9 +1,11 @@
 .UserAvatarDiv{
     position: absolute;
-    margin-top: 12vh;
+    /* margin-top: 12vh; */
+    bottom: 0;
+    margin-bottom: -12%;
 }
 .UserAvatarImg:first-child{
-    width: 10vw;
+    width: 120px;
     height: auto;
     border: 5px solid white;
 }

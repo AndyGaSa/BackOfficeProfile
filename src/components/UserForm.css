@@ -1,7 +1,25 @@
 .UserForm{
     width: 100%;
     height: 100%;
-    background-color: lightpink;
-    padding-top: 15vh;
-    padding-left: 1vw;
+    background-color: white;
+    padding: 5vw;
+    padding-top: 140px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+.UserForm__UserMail{
+    display: flex;
+    justify-content: space-between;
+}
+.UserForm__UserMail > div{
+    width:48%;
+}
+#radioButtons{
+    flex-direction: row ;
+}
+.BioForm{
+    display: flex;
+    flex-direction: column;
 }

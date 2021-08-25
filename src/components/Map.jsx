@@ -6,6 +6,7 @@ import {
 import LocationOnIcon from '@material-ui/icons/LocationOn';
 import PersonPinCircleIcon from '@material-ui/icons/PersonPinCircle';
 import GoogleMapReact from 'google-map-react';
+import './Map.css';
 
 export default function Map() {
   const [center, setCenter] = useState({
@@ -28,7 +29,7 @@ export default function Map() {
   return (
     <>
       <CssBaseline />
-      <Container maxWidth="md">
+      <Container maxWidth="md" className="Map">
         <Typography component="div" style={{ backgroundColor: '#cfe8fc', height: '60vh' }}>
           <GoogleMapReact
             bootstrapURLKeys={{ key: 'AIzaSyBRUMLTzjuEywhAXLLpHwwOBTeYR0Biu-0' }}

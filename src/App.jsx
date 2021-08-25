@@ -10,7 +10,7 @@ function App() {
       <Header />
       <div className="Body">
         <User />
-        <Map />
+        <Map className="Map" />
       </div>
 
     </div>
