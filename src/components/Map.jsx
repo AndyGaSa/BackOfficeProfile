@@ -32,7 +32,7 @@ export default function Map() {
       <Container maxWidth="md" className="MapContainer">
         <Typography component="div" style={{ backgroundColor: 'smokewhite', height: '70vh' }}>
           <GoogleMapReact
-            bootstrapURLKeys={{ key: 'AIzaSyBRUMLTzjuEywhAXLLpHwwOBTeYR0Biu-0' }}
+            bootstrapURLKeys={{ key: process.env.REACT_APP_GOOGLE_MAPS_KEY }}
             center={center}
             defaultZoom={zoom}
             className="GoogleMap"
