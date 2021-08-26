@@ -3,7 +3,6 @@ import React, { useState } from 'react';
 import {
   CssBaseline, Typography, Container, Button,
 } from '@material-ui/core';
-import LocationOnIcon from '@material-ui/icons/LocationOn';
 import PersonPinCircleIcon from '@material-ui/icons/PersonPinCircle';
 import GoogleMapReact from 'google-map-react';
 import './Map.css';
@@ -21,9 +20,12 @@ export default function Map() {
   const zoom = 18;
   const LocationMarker = ({ latText, lngText }) => (
     <div>
-      <LocationOnIcon fontSize="large" />
-      <p className="lat-text">{`Latitude: ${latText}`}</p>
-      <p className="lng-text">{`Longitude: ${lngText}`}</p>
+      <div className="infoBox">
+        <p className="lat-text">{`Latitude: ${latText}`}</p>
+        <p className="lng-text">{`Longitude: ${lngText}`}</p>
+      </div>
+      <div className="pin" />
+      <div className="pulse" />
     </div>
   );
   return (
