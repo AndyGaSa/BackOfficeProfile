@@ -27,7 +27,7 @@ export default function UserForm() {
 
   const RadioHandleChange = (event) => {
     setRadioValue(event.target.value);
-    if (RadioValue.length < 1) {
+    if (event.target.value.length < 1) {
       setRadioErrorText('Gender is required');
       setRadioError(true);
     } else {
