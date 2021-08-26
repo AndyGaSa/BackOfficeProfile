@@ -1,4 +1,3 @@
-/* eslint-disable jsx-a11y/label-has-associated-control */
 import React, { useState } from 'react';
 import {
   FormHelperText,
@@ -112,10 +111,10 @@ export default function UserForm() {
         </RadioGroup>
       </FormControl>
       <div>
-        <label htmlFor="Bio" className="BioForm">
-          Bio
+        <div htmlFor="Bio" className="BioForm">
+          <span>Bio</span>
           <TextareaAutosize aria-label="empty textarea" placeholder="King of The North" className="TextArea" />
-        </label>
+        </div>
       </div>
       <Button variant="contained" onClick={checkValidation} data-testid="saveButton" color="primary">
         SAVE
