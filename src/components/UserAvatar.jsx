@@ -1,4 +1,3 @@
-/* eslint-disable jsx-a11y/label-has-associated-control */
 import React, { useState } from 'react';
 import { Avatar, IconButton } from '@material-ui/core';
 import EditIcon from '@material-ui/icons/Edit';
@@ -15,8 +14,8 @@ export default function UserAvatar() {
     <div className="UserAvatarDiv">
       <Avatar alt="Jhon Snow" src={profileImg} className="UserAvatarImg" />
       <div>
-        <input accept="image/*" className="inputUpload" onChange={onImageChange} id="icon-button-file" type="file" />
         <label htmlFor="icon-button-file" className="editIconDiv">
+          <input accept="image/*" className="inputUpload" onChange={onImageChange} id="icon-button-file" type="file" />
           <IconButton aria-label="upload picture" className="iconButton" component="span">
             <EditIcon style={{ color: 'white' }} />
           </IconButton>
